@@ -1,5 +1,7 @@
+local utils = require("utils")
+
 repeat
-local a, b = 0
+local a, b, d = 0
 print(string.rep("-", 31))
 	print("Qual o tipo de formula voce quer fazer?")
 	print("1-Cientificas \n2-Matematicas")
@@ -97,8 +99,30 @@ end
 elseif b == 2 then
 	print(string.rep("-", 31))
 	print("Qual formula voce deseja fazer?")
-	print("1-Formula de Bhaskara \n2- ")
-
+	print("1-Formula de Bhaskara")
+	print(string.rep("-", 31))
+	c = io.read()
+	c = tonumber(c)
+		
+if c > 1 or c < 1 then 
+	print("Erro. Programa sendo fechado...")
+	return
+	end
+end
+	
+	if c == 1 then
+	local a, b ,c = 0
+		io.write("Digite o coeficiente A: ")
+			a = io.read()
+			a = tonumber(a)
+		io.write("Digite o coeficiente B: ")
+			b = io.read()
+			b = tonumber(b)
+		io.write("Digite o coeficiente C: ")
+			c = io.read()
+			c = tonumber(c)
+		print()
+		print(utils.bask(a, b, c))
 	end
 	c = ""
 	print()

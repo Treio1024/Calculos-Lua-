@@ -1,3 +1,6 @@
+--O arquivo requer o utils.lua para as funções matematicas, se não o programa não funcionara.
+--Execulte na Promnt de comando para que as funções de limpar a tela funcionem.
+
 local utils = require("utils")
 
 repeat

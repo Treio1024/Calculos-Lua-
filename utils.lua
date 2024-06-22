@@ -1,3 +1,5 @@
+--Arquivos para armarzenar funções
+
 local utils = {}
 
 function utils.bask(a, b, c)

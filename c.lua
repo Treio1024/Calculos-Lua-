@@ -30,8 +30,7 @@ end
 		end
 
 		if a == 1 then
-		local a 
-		local b
+		local a, b
 			  io.write("Digite a forca(N): ")
 			a = io.read()
 			a = tonumber(a)
@@ -41,8 +40,7 @@ end
 					print()
 				print("Seu resultado:", a * b, "joules")
 		elseif a == 2 then
-		local a 
-		local b
+			local a, b
 			  io.write("Digite o trabalho(J): ")
 			a = io.read()
 			a = tonumber(a)
@@ -52,8 +50,7 @@ end
 					print()
 				print("Seu resultado:", a / b, "Watts")
 		elseif a == 3 then
-		local a 
-		local b
+			local a, b
 			  io.write("Digite a quantidade de carga(Q): ")
 			a = io.read()
 			a = tonumber(a)
@@ -63,8 +60,7 @@ end
 					print()
 				print("Seu resultado:", a / b, "Amperes")
 		elseif a == 4 then
-		local a 
-		local b
+			local a, b
 			  io.write("Digite a diferenca de potencial(V): ")
 			a = io.read()
 			a = tonumber(a)
@@ -75,8 +71,7 @@ end
 				print("Seu resultado:", a / b, "Ohms")
 
 		elseif a == 5 then
-		local a 
-		local b
+			local a, b
 			  io.write("Digite a diferenca de potencial(V): ")
 			a = io.read()
 			a = tonumber(a)
@@ -87,8 +82,7 @@ end
 				print("Seu resultado:", a * b, "Watts")
 
 		elseif a == 6 then
-		local a 
-		local b
+			local a, b
 			  io.write("Digite a potencia do aparelho(W): ")
 			a = io.read()
 			a = tonumber(a)
@@ -102,12 +96,12 @@ end
 elseif b == 2 then
 	print(string.rep("-", 31))
 	print("Qual formula voce deseja fazer?")
-	print("1-Formula de Bhaskara")
+	print("ALGEBRA: \n1-Formula de Bhaskara \nGEOMETRIA: \n2-Area do triangulo \n3-Area do circulo")
 	print(string.rep("-", 31))
 	c = io.read()
 	c = tonumber(c)
 		
-if c > 1 or c < 1 then 
+if c > 3 or c < 1 then 
 	print("Erro. Programa sendo fechado...")
 	return
 	end
@@ -126,6 +120,23 @@ end
 			c = tonumber(c)
 		print()
 		print(utils.bask(a, b, c))
+	elseif c == 2 then
+		local a, b
+		io.write("Digite a base(cm): ")
+			a = io.read()
+			a = tonumber(a)
+		io.write("Digite a altura(cm): ")
+			b = io.read()
+			b = tonumber(b)
+		print()
+		print("A area do triangulo e: ", (a * b) / 2)
+	elseif c == 3 then
+	local a 
+		io.write("Digite o raio do circulo(cm): ")
+			a = io.read()
+			a = tonumber(a)
+		print()
+		print("A area do circulo e: ", a^2 / math.pi)
 	end
 	c = ""
 	print()
@@ -135,4 +146,3 @@ end
 		
 		os.execute("cls")
 until c == "n"
-

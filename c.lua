@@ -1,5 +1,5 @@
---O arquivo requer o utils.lua para as funções matematicas, se não o programa não funcionara.
---Execulte na Promnt de comando para que as funções de limpar a tela funcionem.
+--O arquivo requer o utils.lua para que alguns calculos funcionem.
+--Execulte na Promnt de comando para que as funções de limpar a tela funcionem (os.execute("cls").
 
 local utils = require("utils")
 

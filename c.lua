@@ -7,25 +7,27 @@ repeat
 local a, b, d = 0
 print(string.rep("-", 31))
 	print("Qual o tipo de formula voce quer fazer?")
-	print("1-Cientificas \n2-Matematicas")
+	print("[1] Cientificas \n[2] Matematicas")
 print(string.rep("-", 31))
 	b = io.read()
 	b  = tonumber(b)
 		if b > 2 or b < 1 then
-		print("Erro. Programa sendo fechado...")
+		os.execute("cls")
+		print("Erro. Programa fechado")
 	return
 end
 	os.execute("cls")
 	if b == 1 then
 		print(string.rep("-", 31))
 		print("Qual formula voce deseja fazer?")
-		print("1-Trabalho \n2-Potencia \n3-Intensidade da corrente \n4-Lei de Ohm \n5-Potencia eletrica \n6-Kilowatt/hora")
+		print("[1] Trabalho \n[2] Potencia \n[3] Intensidade da corrente \n[4] Lei de Ohm \n[5] Potencia eletrica \n[6] Kilowatt/hora")
 		print(string.rep("-", 31))
 			a = io.read()
 			a = tonumber(a)
 
 		if a > 6 or a < 1 then
-			print("Erro. Programa sendo fechado...")
+			os.execute("cls")
+			print("Erro. Programa fechado")
 			return
 		end
 
@@ -96,13 +98,14 @@ end
 elseif b == 2 then
 	print(string.rep("-", 31))
 	print("Qual formula voce deseja fazer?")
-	print("ALGEBRA: \n1-Formula de Bhaskara \nGEOMETRIA: \n2-Area do triangulo \n3-Area do circulo")
+	print("ALGEBRA: \n[1] Formula de Bhaskara \nGEOMETRIA: \n[2] Area do triangulo \n[3] Area do circulo")
 	print(string.rep("-", 31))
 	c = io.read()
 	c = tonumber(c)
 		
 if c > 3 or c < 1 then 
-	print("Erro. Programa sendo fechado...")
+	os.execute("cls")
+	print("Erro. Programa fechado")
 	return
 	end
 end

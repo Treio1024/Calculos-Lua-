@@ -23,11 +23,10 @@ end
 			a = io.read()
 			a = tonumber(a)
 
-		if a > 6 or a < 1 then
-			os.execute("cls")
-			print("Erro. Programa fechado")
-			return
-		end
+	if a > 6 or a < 1 then os.execute("cls")
+		print("Erro. Programa fechado")
+		return
+	end
 
 if a == 1 then local a, b
 	io.write("Digite a forca(N): ")
@@ -93,49 +92,44 @@ elseif b == 2 then
 	c = io.read()
 	c = tonumber(c)
 		
-if c > 3 or c < 1 then 
-	os.execute("cls")
+if c > 3 or c < 1 then os.execute("cls")
 	print("Erro. Programa fechado")
 	return
 	end
 end
 	
-	if c == 1 then
-	local a, b ,c = 0
-		io.write("Digite o coeficiente A: ")
-			a = io.read()
-			a = tonumber(a)
-		io.write("Digite o coeficiente B: ")
-			b = io.read()
-			b = tonumber(b)
-		io.write("Digite o coeficiente C: ")
-			c = io.read()
-			c = tonumber(c)
-		print()
-		print(utils.bask(a, b, c))
-	elseif c == 2 then
-		local a, b
-		io.write("Digite a base(cm): ")
-			a = io.read()
-			a = tonumber(a)
-		io.write("Digite a altura(cm): ")
-			b = io.read()
-			b = tonumber(b)
-		print()
-		print("A area do triangulo e: ", (a * b) / 2)
-	elseif c == 3 then
-	local a 
-		io.write("Digite o raio do circulo(cm): ")
-			a = io.read()
-			a = tonumber(a)
-		print()
-		print("A area do circulo e: ", a^2 / math.pi)
-	end
+if c == 1 then local a, b, c = 0
+	io.write("Digite o coeficiente A: ")
+		a = io.read()
+		a = tonumber(a)
+	io.write("Digite o coeficiente B: ")
+		b = io.read()
+		b = tonumber(b)
+	io.write("Digite o coeficiente C: ")
+		c = io.read()
+		c = tonumber(c)
+	print()
+	print(utils.bask(a, b, c))
+elseif c == 2 then local a, b
+	io.write("Digite a base(cm): ")
+		a = io.read()
+		a = tonumber(a)
+	io.write("Digite a altura(cm): ")
+		b = io.read()
+		b = tonumber(b)
+	print()
+	print("A area do triangulo e: ", (a * b) / 2)
+elseif c == 3 then local a 
+	io.write("Digite o raio do circulo(cm): ")
+		a = io.read()
+		a = tonumber(a)
+	print()
+	print("A area do circulo e: ", a^2 / math.pi)
+end
 	c = ""
 	print()
 	io.write("Deseja continuar? [S/N] ")
 		c = io.read()
 		string.lower(c)
-		
 		os.execute("cls")
 until c == "n"

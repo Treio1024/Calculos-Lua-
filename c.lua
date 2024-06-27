@@ -4,7 +4,7 @@
 local utils = require("utils")
 
 repeat
-local a, b, d = 0
+local a, b, c = 0
 print(string.rep("-", 31))
 	print("Qual o tipo de formula voce quer fazer? \n[1] Cientificas \n[2] Matematicas")
 print(string.rep("-", 31))
@@ -15,13 +15,13 @@ print(string.rep("-", 31))
 	return
 end
 	os.execute("cls")
-	if b == 1 then
-		print(string.rep("-", 31))
-		print("Qual formula voce deseja fazer?")
-		print("[1] Trabalho \n[2] Potencia \n[3] Intensidade da corrente \n[4] Lei de Ohm \n[5] Potencia eletrica \n[6] Kilowatt/hora")
-		print(string.rep("-", 31))
-			a = io.read()
-			a = tonumber(a)
+if b == 1 then
+	print(string.rep("-", 31))
+	print("Qual formula voce deseja fazer?")
+	print("[1] Trabalho \n[2] Potencia \n[3] Intensidade da corrente \n[4] Lei de Ohm \n[5] Potencia eletrica \n[6] Kilowatt/hora")
+	print(string.rep("-", 31))
+		a = io.read()
+		a = tonumber(a)
 
 	if a > 6 or a < 1 then os.execute("cls")
 		print("Erro. Programa fechado")
@@ -42,8 +42,8 @@ elseif a == 2 then local a, b
 		a = io.read()
 		a = tonumber(a)
 	io.write("Digite a variacao do tempo(S): ")
-			b = io.read()
-			b = tonumber(b)
+		b = io.read()
+		b = tonumber(b)
 	print()
 	print("Seu resultado:", a / b, "Watts")
 elseif a == 3 then local a, b
@@ -79,7 +79,7 @@ elseif a == 6 then local a, b
 		a = tonumber(a)
 	io.write("Digite o tempo medio de uso do aparelho(H): ")
 		b = io.read()
-			b = tonumber(b)
+		b = tonumber(b)
 	print()
 	print("Seu resultado:", (a * b) / 1000, "Kwh")
 end
@@ -92,12 +92,11 @@ elseif b == 2 then
 	c = io.read()
 	c = tonumber(c)
 		
-if c > 3 or c < 1 then os.execute("cls")
-	print("Erro. Programa fechado")
-	return
+	if c > 3 or c < 1 then os.execute("cls")
+		print("Erro. Programa fechado")
+		return
 	end
-end
-	
+
 if c == 1 then local a, b, c = 0
 	io.write("Digite o coeficiente A: ")
 		a = io.read()
@@ -125,11 +124,12 @@ elseif c == 3 then local a
 		a = tonumber(a)
 	print()
 	print("A area do circulo e: ", a^2 / math.pi)
+	end
 end
-	c = ""
+	d = ""
 	print()
 	io.write("Deseja continuar? [S/N] ")
-		c = io.read()
+		d = io.read()
 		string.lower(c)
 		os.execute("cls")
-until c == "n"
+until d == "n"

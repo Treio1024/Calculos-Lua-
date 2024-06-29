@@ -130,6 +130,6 @@ end
 	print()
 	io.write("Deseja continuar? [S/N] ")
 		d = io.read()
-		string.lower(c)
+		string.lower(d)
 		os.execute("cls")
 until d == "n"
